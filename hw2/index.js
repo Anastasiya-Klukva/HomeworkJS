@@ -1,5 +1,6 @@
 const { searchCity, searchAge, sortNames, searchAgeAndSex, add, printCities } = require('./functions');
 const processArrayFunction = require('./array');
+let myArray = ['1', 1, 'a', { hello: 'world' }, 'qwe'];
 const newStudent = {
     name: 'Josef Orlov',
     age: 49,
@@ -13,4 +14,4 @@ sortNames();
 searchAgeAndSex(20, 'Male');
 add(newStudent);
 printCities();
-processArrayFunction(array);
+console.log(processArrayFunction(myArray));

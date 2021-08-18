@@ -10,8 +10,6 @@
 -пример,output {1:1,a:{hello:'world'},qwe:null,length:3} */
 
 
-let myArray = ['1', 1, 'a', { hello: 'world' }, 'qwe'];
-
 function processArrayFunction(array) {
     let resultObject = {};
     for (let i = 0; i < array.length; i += 2) {
@@ -26,7 +24,7 @@ function processArrayFunction(array) {
     resultObject['length'] = Object.keys(resultObject).length;
     return resultObject;
 }
-console.log(processArrayFunction(myArray));
+//console.log(processArrayFunction(myArray));
 //console.log(myArray[100]);
 
 
