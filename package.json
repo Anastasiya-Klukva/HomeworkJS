@@ -5,7 +5,7 @@
     "main": "index.js",
     "scripts": {
         "hw1": "node ./hw1/index.js",
-        "hw2": "node ./hw2/index2.js"
+        "hw2": "node ./hw2/index.js"
     },
     "keywords": [],
     "author": "klukva <Anastasiya_Piatrova3@epam.com>",
