@@ -11,7 +11,7 @@ let rabbitCount = 200;
 
 
 function calculateRabbitCount() {
-    for (i = 1; i <= monthCount; i++) {
+    for (let i = 1; i <= monthCount; i++) {
         if (i % 2 === 0 && rabbitCount > 100) {
             rabbitCount = Math.floor(rabbitCount - rabbitCount / 5);
         }

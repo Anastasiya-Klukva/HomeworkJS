@@ -100,6 +100,12 @@ function printCities() {
     console.log(output)
 }
 
+function getFemaleMarriedStudents() {
+    return students.filter(student => student.sex === 'Female' && student.isMarried);
+}
+
+console.log(getFemaleMarriedStudents());
+
 
 
 let newStudent = {
@@ -108,7 +114,6 @@ let newStudent = {
     sex: 'Male',
     isMarried: true,
     city: 'Wellington',
-}
+};
 
-
-module.exports = printCities, searchCity, add, searchAgeAndSex, sortNames, searchAge, newStudent;
+module.exports = { printCities, searchCity, add, searchAgeAndSex, sortNames, searchAge, getFemaleMarriedStudents };

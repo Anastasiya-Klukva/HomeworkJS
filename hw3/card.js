@@ -12,7 +12,7 @@ Bonus:Написать юнит-тесты;сымитировать приват
 class Card {
     constructor(cardOwnerName, cardBalance) {
         this.cardOwnerName = "Anastasiya";
-        this.catdBalance = 100;
+        this.cardBalance = 100;
     }
     display() {
         console.log(this.cardOwnerName, this.cardBalance);
@@ -22,4 +22,4 @@ const debit = new Card();
 debit.balance = 50;
 console.log(debit.balance);
 
-module.exports = card;
+module.exports = { Card };
