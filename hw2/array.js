@@ -10,7 +10,7 @@
 -пример,output {1:1,a:{hello:'world'},qwe:null,length:3} */
 
 
-function processArrayFunction(array) {
+function processesOfInputAnArrayAndReturnsAnObject(array) {
     let resultObject = {};
     for (let i = 0; i < array.length; i += 2) {
         if (i % 2 === 0) {
@@ -24,8 +24,8 @@ function processArrayFunction(array) {
     resultObject['length'] = Object.keys(resultObject).length;
     return resultObject;
 }
-//console.log(processArrayFunction(myArray));
+//console.log(processesOfInputAnArrayAndReturnsAnObject(myArray));
 //console.log(myArray[100]);
 
 
-module.exports = processArrayFunction;
+module.exports = processesOfInputAnArrayAndReturnsAnObject;

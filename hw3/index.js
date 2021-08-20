@@ -1,4 +1,4 @@
-const card = require('./card');
+const Card = require('./card');
 const vehicle = require('./vehicle');
 
-card();
+Card();

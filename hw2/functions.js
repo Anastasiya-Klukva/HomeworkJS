@@ -68,7 +68,7 @@ function searchAge(age) {
 
 
 function sortNames() {
-    let result = students.map(item => item.name.split(' '), 0);
+    let result = students.map(item => item.name, 0);
     result.sort();
     console.log('Students names sort by alphabetic', result);
 }
@@ -108,12 +108,5 @@ console.log(getFemaleMarriedStudents());
 
 
 
-let newStudent = {
-    name: 'Josef Orlov',
-    age: 49,
-    sex: 'Male',
-    isMarried: true,
-    city: 'Wellington',
-};
 
 module.exports = { printCities, searchCity, add, searchAgeAndSex, sortNames, searchAge, getFemaleMarriedStudents };
