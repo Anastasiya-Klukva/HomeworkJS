@@ -13,4 +13,6 @@ function factorial(x) {
 }
 console.log("The factorial of 13 is " + factorial(13)); //13! = 6227020800
 
+
+
 module.exports = factorial;

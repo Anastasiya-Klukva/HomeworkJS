@@ -7,16 +7,23 @@
 (курс конверсии передается как аргумент метода)
 Имя владельца может передаваться через переменную окружения(process.env).
 Bonus!:Написать юнит-тесты;сымитировать приватность 
-поля с балансом, чтобы переменная была недоступна для изменений(только через функции работы с балансом). */
+поля с балансом, чтобы переменная была недоступна для изменений(только через функции работы с балансом). 
 
-function Card(cardOwnerName, cardBalance) {
-    this.cardOwnerName = "Anastasiya";
-    this.cardBalance = 100;
+*/
+
+function setCardParameters(cardOwnerName, cardBalance) {
+    this.cardOwnerName = cardOwnerName;
+    this.cardBalance = cardBalance;
 }
+cardOwnerName =
+    setCardParameters("Anastasiya", 1000);
+
+console.log(setCardParameters);
+
 
 function createNewCardForSpecialPerson(withBasicBalance, withoutBasicBalance) {
-    this.withBasicBalance = 100;
-    this.withBasicBalance = 0;
+    this.withBasicBalance = withBasicBalance;
+    this.withBasicBalance = withoutBasicBalance;
 }
 
 function balanceOperation(gettingMoney, pushingMoney, spendingMoney) {
@@ -28,7 +35,7 @@ let displayCard = function() {
     this.spendingMoney.toggle("spent");
 }
 
-const gettingMoneyInDollars = function(count)
+const gettingMoneyInDollars = function(count) * /
 
 //const debit = new Card();
 //debit.balance = 50;
@@ -97,7 +104,7 @@ function enable(){
   } */
 
 
-module.exports = { Card };
-module.exports = createNewCardForSpecialPerson();
-module.exports = balanceOperation();
-module.exports = displayCard();
+module.exports = { setCardParameters };
+//module.exports = createNewCardForSpecialPerson();
+//module.exports = balanceOperation();
+//module.exports = displayCard();

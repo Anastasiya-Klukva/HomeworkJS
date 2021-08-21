@@ -1,4 +1,11 @@
-const { searchCity, searchAge, sortNames, searchAgeAndSex, add, printCities } = require('./functions');
+const {
+    searchCity,
+    searchAge,
+    sortNames,
+    searchAgeAndSex,
+    add,
+    printCities
+} = require('./functions');
 const processesOfInputAnArrayAndReturnsAnObject = require('./array');
 let myArray = ['1', 1, 'a', { hello: 'world' }, 'qwe'];
 const newStudent = {

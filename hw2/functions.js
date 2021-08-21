@@ -109,4 +109,12 @@ console.log(getFemaleMarriedStudents());
 
 
 
-module.exports = { printCities, searchCity, add, searchAgeAndSex, sortNames, searchAge, getFemaleMarriedStudents };
+module.exports = {
+    printCities,
+    searchCity,
+    add,
+    searchAgeAndSex,
+    sortNames,
+    searchAge,
+    getFemaleMarriedStudents
+};

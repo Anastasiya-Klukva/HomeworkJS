@@ -21,12 +21,12 @@ function calculateRabbitCount(months) {
     }
     return rabbitCount;
 }
-console.log('1 month ' + calculateRabbitCount(1) + ' rabbit count');
-console.log('2 month ' + calculateRabbitCount(2) + ' rabbit count');
-console.log('3 month ' + calculateRabbitCount(3) + ' rabbit count');
-console.log('4 month ' + calculateRabbitCount(4) + ' rabbit count');
-console.log('5 month ' + calculateRabbitCount(5) + ' rabbit count');
-console.log('6 month ' + calculateRabbitCount(6) + ' rabbit count');
+//console.log('1 month ' + calculateRabbitCount(1) + ' rabbit count');
+//console.log('2 month ' + calculateRabbitCount(2) + ' rabbit count');
+//console.log('3 month ' + calculateRabbitCount(3) + ' rabbit count');
+//console.log('4 month ' + calculateRabbitCount(4) + ' rabbit count');
+//console.log('5 month ' + calculateRabbitCount(5) + ' rabbit count');
+//console.log('6 month ' + calculateRabbitCount(6) + ' rabbit count');
 
 
 module.exports = calculateRabbitCount;
