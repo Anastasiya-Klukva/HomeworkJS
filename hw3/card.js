@@ -10,14 +10,13 @@ Bonus!:Написать юнит-тесты;сымитировать прива�
 поля с балансом,чтобы переменная была недоступна для изменений(только через функции работы с балансом). 
 */
 
-function SetCardParameters(cardOwnerName, cardBalanceInBYN, cardBalanceInEuro) {
+function Card(cardOwnerName, cardBalance) {
     this.cardOwnerName = cardOwnerName;
-    this.cardBalanceInBYN = cardBalanceInBYN;
-    this.cardBalanceInEuro = cardBalanceInEuro;
+    this.cardBalance = cardBalance;
 
 }
 
-console.log(new SetCardParameters("Anastasiya", 1000, 0));
+console.log(new Card("Anastasiya", 1000));
 
 function CreateNewCardForSpecialPerson(withBasicBalance, withoutBasicBalance) {
     this.withBasicBalance = withBasicBalance;
@@ -29,11 +28,11 @@ console.log(new CreateNewCardForSpecialPerson(100, 0));
 function OpetationWithBalance(gettingMoney, pushingMoney, spendingMoney) {
     this.gettingMoney = gettingMoney;
     this.pushingMoney = pushingMoney;
-    this.spendingMoney = spendingMoney;
+    this.spendingMoney = spendingMoney; // это должгы быть функции , определенные внутри для card, а не конструктор
 }
 
 console.log(new OpetationWithBalance(500, 10, 5));
 
 function ShowBalanceEuroCurrency(euroCurrency) {
-    this.euroCurrency = euroCurrency;
+    this.euroCurrency = euroCurrency; // внутри карты, а сам курс валюты  передать как аргумент
 }
