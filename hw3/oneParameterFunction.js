@@ -6,7 +6,7 @@ const mul15 = mul3(5)//15
 mul15(2)//30; т.е. должна вернуться некая другая функция, которую мы можем вызвать с аргументом */
 
 
-var getMultiple = function() { ////самовызывающаяся функция
+var getMultiple = function() { //самовызывающаяся функция
     var mul = 6;
     return function(x) {
         mul *= x;
