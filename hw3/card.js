@@ -8,31 +8,32 @@
 Имя владельца может передаваться через переменную окружения(process.env).
 Bonus!:Написать юнит-тесты;сымитировать приватность 
 поля с балансом,чтобы переменная была недоступна для изменений(только через функции работы с балансом). 
+!!!это должны быть функции , определенные внутри для card, а не конструктор
 */
 
+
 function Card(cardOwnerName, cardBalance) {
+    let balance = cardBalance || 20;
+
     this.cardOwnerName = cardOwnerName;
-    this.cardBalance = cardBalance;
-
-
-    const gettingMoney = new Card(gettingMoney); // это должны быть функции , определенные внутри для card, а не конструктор
-
-    const pushingMoney = new Card(pushingMoney);
-
-    const spendingMoney = new Card(spendingMoney);
-
-    const showBalanceEuroCurrency = new Card(showBalanceEuroCurrency);
-
-    showBalanceEuroCurrency.cardBalance(euroCurrency);
-
-
-    function CreateNewCardForSpecialPerson(withBasicBalance, withoutBasicBalance) {
-        this.withBasicBalance = withBasicBalance;
-        this.withBasicBalance = withoutBasicBalance;
+    this.getBalance = function() {
+        return balance;
     }
-}
 
+    this.increaseBalance = function() {
+        return balance++;
+    }
+    this.decreaseBalance = function() {
+        return balance--;
+    }
+    this.convertBalance = function(conversion) {
+        return balance * conversion;
+    }
+};
+console.log(Visa = new Card("Nastya", 10));
+console.log(Visa.getBalance());
+console.log(Visa.increaseBalance());
+console.log(Visa.decreaseBalance());
+console.log(Visa.convertBalance(2));
 
-console.log(new Card("Jimm", 1000));
-
-console.log(new CreateNewCardForSpecialPerson(100, 0));
+module.exports = { Card };
