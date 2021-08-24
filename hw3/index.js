@@ -8,6 +8,6 @@ getMultiple(9);
 
 Visa = new Card("Nastya", 10);
 Visa.getBalance();
-Visa.increaseBalance();
-Visa.decreaseBalance();
+Visa.increaseBalance(5);
+Visa.decreaseBalance(7);
 Visa.convertBalance(2);
