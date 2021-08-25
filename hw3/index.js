@@ -1,13 +1,17 @@
 const { Card } = require('./card');
 const getMultiple = require('./oneParameterFunction');
 
+const { Car } = require('./car');
+
 
 getMultiple(1);
 getMultiple(3);
 getMultiple(9);
 
-Visa = new Card("Nastya", 10);
+Visa = new Card("Nastya", 100);
 Visa.getBalance();
 Visa.increaseBalance(5);
+Visa.getBalance();
 Visa.decreaseBalance(7);
+Visa.getBalance();
 Visa.convertBalance(2);

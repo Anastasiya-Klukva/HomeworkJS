@@ -13,27 +13,30 @@ Bonus!:Написать юнит-тесты;сымитировать прива�
 
 
 function Card(cardOwnerName, cardBalance) {
-    let balance = cardBalance || 20;
+    let balance = cardBalance || 0;
     this.cardOwnerName = cardOwnerName;
 
     this.getBalance = function() {
         return balance;
     }
     this.increaseBalance = function(adding) {
-        return balance + adding;
+        return balance += adding;
     }
+
     this.decreaseBalance = function(subtract) {
-        return balance - subtract;
+        return balance -= subtract;
     }
     this.convertBalance = function(conversion) {
         return balance * conversion;
     }
 };
 
-console.log(Visa = new Card("Nastya", 10));
+console.log(Visa = new Card("Nastya", 100));
 console.log(Visa.getBalance());
 console.log(Visa.increaseBalance(5));
+console.log(Visa.getBalance());
 console.log(Visa.decreaseBalance(7));
+console.log(Visa.getBalance());
 console.log(Visa.convertBalance(2));
 
 module.exports = { Card };
