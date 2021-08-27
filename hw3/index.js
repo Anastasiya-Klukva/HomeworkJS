@@ -1,7 +1,7 @@
 const { Card } = require('./card');
 const getMultiple = require('./oneParameterFunction');
 
-const { Car } = require('./car');
+const { Car2, GazolineStation } = require('./car2');
 
 
 getMultiple(1);

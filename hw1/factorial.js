@@ -11,7 +11,7 @@ function factorial(x) {
     return x * factorial(x - 1); //рекурсивная функция,factorial вызывает себя столько раз,сколько x не равно 0.
 
 }
-console.log("The factorial of 25 is " + factorial(25)); //25! = 1.5511210043330986e+25
+console.log("The factorial of 0 is " + factorial(0)); //25! = 1.5511210043330986e+25
 
 //function factorial(n) {
 //    if (n == 0 || n == 1) {

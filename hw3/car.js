@@ -3,8 +3,7 @@
 Функцию по заправке принимает модуль gasoline station. В этом модуле 1 функция-
 заправить бензином машину на какое-то кол-во топлива.Отправьте машину из Могилева в Минск.Расстояние 200 км.
 Количество станций от 4 до 8.Пользователь задает кол-во заправляемого топлива на каждой заправке.
-Если мы не можем продолжать дальше путь(закончился бензин)- написать кол-во пройденного расстояния в км.
-у каждого есть свой набор функций */
+Если мы не можем продолжать дальше путь(закончился бензин)- написать кол-во пройденного расстояния в км.*/
 
 var car = (function Car(fuelСonsumption, fuelTankСapacity) {
     var consumption = fuelСonsumption || 0;
@@ -16,7 +15,7 @@ var car = (function Car(fuelСonsumption, fuelTankСapacity) {
     }
     return capacity;
 
-    function GasolineStation() {
+    {
         this.refuelСar = function(count) {
             return consumption + capacity + Lukoil;
         }

@@ -8,11 +8,11 @@ mul15(2)//30; т.е. должна вернуться некая другая ф�
 */
 
 
-let getMultiple = (function(mul3) {
-    let mul3 = mul(3); // сюда вставить произвольное число, которое мы запоминаем 
+let getMultiple = (function(x) {
+    let mul = 1; // сюда вставить произвольное число, которое мы запоминаем 
     return function(x) {
 
-        mul3 *= x;
+        mul *= x;
         return mul;
     }
 }());
@@ -20,6 +20,7 @@ let getMultiple = (function(mul3) {
 console.log(getMultiple(1));
 console.log(getMultiple(3));
 console.log(getMultiple(9));
+
 
 
 module.exports = getMultiple;
