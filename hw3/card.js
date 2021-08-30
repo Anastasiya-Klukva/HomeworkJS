@@ -14,7 +14,7 @@ Bonus!:Написать юнит-тесты;сымитировать прива�
 
 function Card(cardOwnerName, cardBalance) {
     let balance = cardBalance || 0;
-    this.cardOwnerName = cardOwnerName;
+    this.cardOwnerName = cardOwnerName || process.env.USERNAME;
 
     this.getBalance = function() {
         return balance;
@@ -31,7 +31,7 @@ function Card(cardOwnerName, cardBalance) {
     }
 };
 
-console.log(Visa = new Card("Nastya", 100));
+console.log(Visa = new Card());
 console.log(Visa.getBalance());
 console.log(Visa.increaseBalance(5));
 console.log(Visa.getBalance());

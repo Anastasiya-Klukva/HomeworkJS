@@ -1,7 +1,11 @@
  const Card = require('./card');
 
+ const Card = require('./Pizza');
 
- Card();
+ //let balance1 = new Card("Nastya", 0);
+
+ // console.log(balance1.getBalance());
+
 
  //const Album = require('.Album');
  //const Artist = require('.Artist');
