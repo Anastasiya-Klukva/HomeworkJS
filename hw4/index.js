@@ -1,10 +1,16 @@
  const Card = require('./card');
 
- const Card = require('./Pizza');
+ const Pizza = require('./Pizza');
+ const PizzaToppings = require('./Pizza');
 
- //let balance1 = new Card("Nastya", 0);
 
- // console.log(balance1.getBalance());
+
+ const myPizza = new PizzaToppings('small', 50, 20, 'cheese with basil', 10 + 10, 10 + 5);
+ myPizza.bakePizzaWithToppings();
+ bake();
+ console.log("The total price for pizza is " + myPizza.sumPrice() + " rubbles.");
+ console.log("The total sum of pizza calories is " + myPizza.sumCalories() + " .");
+
 
 
  //const Album = require('.Album');

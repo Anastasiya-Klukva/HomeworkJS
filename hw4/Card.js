@@ -23,8 +23,9 @@ class CreditCard extends Card {
         super(options);
 
         this.hasUnlimitBalance = options.hasUnlimitBalance;
-        this.type = " ";
+
     }
+
 }
 
 class DebitCard extends Card {
@@ -32,7 +33,6 @@ class DebitCard extends Card {
         super(options);
 
         this.keepNoMinusBalance = options.keepNoMinusBalance;
-        this.type = " ";
     }
 }
 console.log(Transaction = new CreditCard("Nastya", 100, 6000));
