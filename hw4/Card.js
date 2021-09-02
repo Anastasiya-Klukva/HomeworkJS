@@ -8,33 +8,57 @@ Bonus!
 -для операций с балансом используйте обработку ошибок. */
 
 class Card {
-
-    constructor(options) {
-        this.cardBalance = options.cardBalance;
-        this.cardOwnerName = options.cardOwnerName;
+    constructor(cardOwnerName, cardBalance) {
+        this.cardOwnerName = cardOwnerName || 'Nastya';
+        this._cardBalance = cardBalance || 100;
     }
-    getBalance() {
-        console.log("I have got a balance from card " + this.cardBalance);
+    _getCardBalance() {
+        return this._cardBalance;
+    }
+    getCardOwnerName() {
+        return this.cardOwnerName;
     }
 }
 
 class CreditCard extends Card {
-    constructor(options) {
-        super(options);
 
-        this.hasUnlimitBalance = options.hasUnlimitBalance;
-
+    constructor(cardOwnerName, cardBalance, unlimOptionForBalance) {
+        super(cardOwnerName, cardBalance);
+        this.unlimOptionForBalance = unlimOptionForBalance || 500;
     }
-
+    takeUnlimMoney(unlimOptionForBalance) {
+        if (unlimOptionForBalance > this.cardBalance) {
+            return this.cardBalance - unlimOptionForBalance;
+        } else {
+            console.log("You are so rich!");
+        }
+    }
+    getCardBalance() {
+        return this.cardBalance - this.unlimOptionForBalance;
+    }
 }
 
 class DebitCard extends Card {
-    constructor(options) {
-        super(options);
-
-        this.keepNoMinusBalance = options.keepNoMinusBalance;
+    constructor(cardOwnerName, cardBalance, balanceLimit) {
+        super(cardOwnerName, cardBalance);
+        this._balanceLimit = balanceLimit || 100;
+    }
+    checkBalance(value) {
+        if (value < 100) throw new Error("Negative quantity of money");
+        if (value > this.balanceLimit) throw new Error(" Too much money");
     }
 }
-console.log(Transaction = new CreditCard("Nastya", 100, 6000));
+console.log(masterCard = new Card());
+console.log(masterCard._getCardBalance());
+console.log(masterCard.getCardOwnerName());
 
-module.export = { Card };
+console.log(masterCard = new CreditCard());
+console.log(masterCard.takeUnlimMoney(120));
+console.log(masterCard.getCardBalance());
+
+
+console.log(masterCard = new DebitCard());
+console.log(masterCard.checkBalance(99));
+
+
+module.export = { Card, CreditCard, DebitCard };
