@@ -17,7 +17,7 @@ function Car2(fuelPer100Km, maxLitresOfTank) {
 
     this.makeTankFull = function makeTankFull(gasolineStation) {
         if (fuelBalance < tankLitresSize) {
-            fuelBalance = tankLitresSize;
+            fuelBalance += tankLitresSize;
             console.log("The car needs some fuel.")
             return true;
         } else {

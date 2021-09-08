@@ -13,13 +13,5 @@ function factorial(x) {
 }
 console.log("The factorial of 0 is " + factorial(0)); //25! = 1.5511210043330986e+25
 
-//function factorial(n) {
-//    if (n == 0 || n == 1) {
-//        return 1;
-//    }
-//    return factorial(n - 1) * n;
-//}
-//console.log("The factorial of 25 is " + factorial(2)); // 25! = 1.5511210043330986e+25
-//
 
 module.exports = factorial;

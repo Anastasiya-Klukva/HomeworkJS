@@ -10,7 +10,7 @@ Bonus!
 class Card {
     constructor(cardOwnerName, cardBalance) {
         this.cardOwnerName = cardOwnerName || 'Nastya';
-        this._cardBalance = cardBalance || 100;
+        this._cardBalance = cardBalance || 10;
     }
     _getCardBalance() {
         return this._cardBalance;
