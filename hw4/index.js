@@ -4,10 +4,10 @@ const CreditCard = require('./card');
 const PizzaPapa = require('./PizzaPapa').default;
 
 console.log(papaBo = new PizzaPapa('', ['cheese']));
+console.log(papaJoe = new PizzaPapa('small'));
 console.log(papaBo.getPrice());
 console.log(papaBo.getCallories());
-
-
+console.log(papaJoe.addToppings());
 
 console.log(masterCard = new Card());
 console.log(masterCard._getCardBalance());

@@ -5,7 +5,13 @@
  Если пицца не имеет какого-либо мяса(либо салями)- она будет вегетерианской.
  Посчитайте стоимость и калорийность пиццы.
  Bonus!Пицца может поддерживать динамические начинки и 
- размер(их можно менять по ходу исполнения программы- надо дописать соответствующие методы/функции ) */
+ размер(их можно менять по ходу исполнения программы- надо дописать соответствующие методы/функции ) 
+const myPizza = new Pizza(Pizza.SIZES.small); // маленькая пицца
+myPizza.addTopping(Pizza.TOPPINGS.salad) // добавили салат
+myPizza.isVagan // true – пицца не имеет мяса
+myPizza.removeTopping(PIZZA.TOPPINGS.salad)// удаляем топинг
+myPizza.addTopping(PIZZA.TOPPINGS.meat) // мясо
+myPizza.isVegan // false */
 
 
 class PizzaPapa {
@@ -35,9 +41,8 @@ class PizzaPapa {
                 }
             });
         }
-        return 'The total price of pizza is ' + price + ' rubles.';
+        return 'The total price of "PapaBo" pizza is ' + price + ' rubles.';
     }
-
     getCallories() {
         let calories = this.size === 'small' ? 20 : 40;
         if (this.toppings.length > 0) {
@@ -45,14 +50,12 @@ class PizzaPapa {
                 switch (toppings) {
                     case 'cheese':
                         calories += 10;
-                        console.log('Thank you for Vegeterian choice.');
                         break;
                     case 'salami':
                         calories += 20;
                         break;
                     case 'basilic':
                         calories += 5;
-                        console.log('Thank you for Vegeterian choice.');
                         break;
                     case 'meat':
                         calories += 15;
@@ -62,12 +65,29 @@ class PizzaPapa {
                 }
             });
         }
-        return 'The total calories of your pizza is ' + calories + ' ccal.';
+        if ('cheese' || 'basilic') {
+            return 'The total calories of your Vegeterian pizza is ' + calories + ' ccal.';
+        } else {
+            return 'The total calories of your pizza is ' + calories + ' ccal.'
+        }
+    }
+    addToppings() {
+        let assortimentOfToppings = [
+            'cheese',
+            'salami',
+            'basilic',
+            'meat'
+        ]
+        return "We added all our toppings to your  " + this.size + " PapaJoe pizza : " + assortimentOfToppings;
     }
 }
 
-console.log(papaBo = new PizzaPapa('', ['cheese']));
+console.log(papaBo = new PizzaPapa('small', ['cheese', 'basilic']));
+
+console.log(papaJoe = new PizzaPapa('small'));
 console.log(papaBo.getPrice());
 console.log(papaBo.getCallories());
+
+console.log(papaJoe.addToppings());
 
 module.exports = { PizzaPapa };
