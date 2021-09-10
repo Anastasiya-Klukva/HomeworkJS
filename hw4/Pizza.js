@@ -37,7 +37,7 @@ class Pizza {
         return this.toppings;
     }
     get isVegan() {
-        return !this.toppings.some((toppings) => toppings.meat) ? "Vege pizza" : "Meat pizza";
+        return !this.toppings.some((toppings) => toppings.meat);
     }
 }
 console.log(myPizza = new Pizza(Pizza.SIZES.small));
@@ -48,4 +48,4 @@ console.log(myPizza.addToppings(Pizza.TOPPINGS.cheese));
 console.log(myPizza.isVegan);
 console.log(myPizza.removeTopping(Pizza.TOPPINGS.salami));
 
-module.exports = { Pizza }
+module.exports = { Pizza };

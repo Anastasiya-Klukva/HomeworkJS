@@ -84,7 +84,7 @@ function searchAgeAndSex(age, sex) {
 
 function add(obj) {
     let result = [...students, obj];
-    console.log(result)
+    console.log(result);
 }
 
 
