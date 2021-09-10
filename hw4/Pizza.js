@@ -24,24 +24,28 @@ class Pizza {
         meat: { name: 'meat', price: 20, calories: 15, meat: true },
         salami: { name: 'salami', price: 15, calories: 20, salami: true }
     };
-    constructor(size, toppings) {
+    constructor(size) {
         this.size = size;
         this.toppings = [];
     }
     addToppings(toppings) {
-        return this.toppings.push(toppings);
+        this.toppings.push(toppings);
+        return this.toppings;
     }
     removeTopping(toppings) {
-        return this.toppings.pop(toppings);
+        this.toppings.splice(this.toppings.indexOf(toppings), 1); //количество удаляемых эл-тов
+        return this.toppings;
     }
     get isVegan() {
-        return !this.toppings.some((toppings) => toppings.meat);
+        return !this.toppings.some((toppings) => toppings.meat) ? "Vege pizza" : "Meat pizza";
     }
 }
 console.log(myPizza = new Pizza(Pizza.SIZES.small));
+console.log(myPizza.addToppings(Pizza.TOPPINGS.meat));
 console.log(myPizza.addToppings(Pizza.TOPPINGS.oregano));
+console.log(myPizza.addToppings(Pizza.TOPPINGS.salami));
+console.log(myPizza.addToppings(Pizza.TOPPINGS.cheese));
 console.log(myPizza.isVegan);
 console.log(myPizza.removeTopping(Pizza.TOPPINGS.salami));
-console.log(myPizza.addToppings(Pizza.TOPPINGS.cheese));
 
 module.exports = { Pizza }
