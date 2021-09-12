@@ -18,10 +18,10 @@ function Car2(fuelPer100Km, maxLitresOfTank) {
     var tankLitresSize = maxLitresOfTank || 50;
     var fuelBalance = 0;
 
-    this.makeTankFull = function makeTankFull(gasolineStation) {
+    this.makeTankFull = function makeTankFull() {
         if (fuelBalance < tankLitresSize) {
             fuelBalance += tankLitresSize;
-            console.log("The car needs some fuel.")
+            console.log("The car needs some fuel.");
             return true;
         } else {
             console.log("The tank of the car is full of fuel.");
@@ -43,11 +43,11 @@ function Car2(fuelPer100Km, maxLitresOfTank) {
 };
 
 function GasolineStation() {
-
+    return this.fuelBalance + this.GasolineStation;
 };
 
 const GazProm = new GasolineStation();
-const Belarusneft = new GasolineStation()
+const Belarusneft = new GasolineStation();
 const Lukoil = new GasolineStation();
 const A100 = new GasolineStation();
 
@@ -58,6 +58,7 @@ console.log(Ford.makeTankFull(Lukoil));
 console.log(Ford.makeTankFull(Belarusneft));
 console.log(Ford.makeTankFull(GazProm));
 console.log(Ford.goDistance(200));
+
 
 
 
