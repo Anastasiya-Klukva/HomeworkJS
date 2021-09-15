@@ -14,24 +14,24 @@
 */
 
 
-function Car(fuelConsumption, tankCapacity) {
+function Car(fuelConsumption, tankCapacity, litresOfFuel) {
     thiis.fuelConsumption = fuelConsumption;
     this.tankCapacity = tankCapacity;
-    let litresOfFuel = this.litresOfFuel || 10;
+    this.litresOfFuel = this.litresOfFuel || 10;
 }
 
-this.goRoad = function(fuelConsumption) {
-    this.fuelConsumption.push(fuelConsumption);
+this.goRoad = function() {
+    this.fuelConsumption.push(this.fuelConsumption);
     return this.fuelConsumption;
 }
 
-this.addFuelToTank = function(litresOfFuel) {
-    this.tankCapacity.push(litresOfFuel);
-    return this.tankCapacity += litresOfFuel;
+this.addFuelToTank = function() {
+    this.tankCapacity.push(this.litresOfFuel);
+    return this.tankCapacity += this.litresOfFuel;
 }
 
-function GasolineStation(litresOfFuel) {
-    return this.GasolineStation += litresOfFuel;
+function GasolineStation() {
+    return this.GasolineStation += this.litresOfFuel;
 }
 
 console.log(GazProm = new GasolineStation(11));
