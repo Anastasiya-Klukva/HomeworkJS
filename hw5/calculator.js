@@ -25,6 +25,6 @@ async function processLineByLine() {
         console.log(`Line from the file txt: ${line}`);
     }
 }
-console.log(processLineByLine(2));
+console.log(processLineByLine());
 
 module.exports = fs;

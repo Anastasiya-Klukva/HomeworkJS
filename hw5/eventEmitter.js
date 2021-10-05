@@ -1,17 +1,24 @@
-let events = require("events");
+const events = require("events");
 
 //create an EventEmitter object
-let myEventEmitter = new events.EventEmitter();
+const myEventEmitter = new events.EventEmitter();
 
-myEventEmitter.on("wow", (numbers) => {
-    console.log("great", numbers);
+myEventEmitter.on('minus', (fileStream) => {
+    console.log("great", fileStream);
+});
+myEventEmitter.on('plus', (fileStream) => {
+    console.log("ok", fileStream);
+});
+myEventEmitter.on('divide', (fileStream) => {
+    console.log("nice", fileStream);
 });
 
-function calc() {
-    myEventEmitter.emit("wow"),
-        myEventEmitter.emit('bu');
-}
 
-calc();
+myEventEmitter.emit('minus', 'I want to minus the file');
+
+myEventEmitter.emit('plus', 'I want to plus the file');
+
+myEventEmitter.emit('divide', 'I want to divide the file');
+
 
 module.exports = myEventEmitter;
