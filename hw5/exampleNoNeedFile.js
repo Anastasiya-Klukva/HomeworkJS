@@ -1,4 +1,4 @@
-'use strict'
+/*'use strict'
 
 const fs = require('fs');
 const events = require('events');
@@ -30,5 +30,19 @@ sleep(1500).then(() => {
     console.log('After sleep: ' + new Date().toISOString())
 });
 
+//const readline = require('readline');
+//async function processLineByLine() {
+//    const fileStream = fs.createReadStream('../input.txt');
+//
+//    const readLine = readline.createInterface({
+//        input: fileStream
+//    });
+//
+//    for await (const line of readLine) {
+//        console.log(`Line from the file txt: ${line }`);
+//    }
+//}
+//console.log(processLineByLine());
 
-module.exports = eventEmitter;
+
+module.exports = eventEmitter; */
