@@ -1,8 +1,8 @@
-//const { InputTxtReader } = require('./classes/inputTxtReader')
+const { FileReader } = require('./classes/fileReader');
 const { Calculator } = require('./classes/calculator');
 const { CalculationEvent } = require('./classes/calculationEvent');
 
-const filePath = '../hw5/input.txt';
+const filePath = '../input.txt';
 
 const fileReader = new FileReader();
 const [number1, number2] = fileReader.getNumbersFromFile(filePath);
@@ -12,7 +12,7 @@ const calculationEvent = new CalculationEvent(calculator);
 
 calculationEvent.emit('result');
 
-calculationEvent.emit('plus');
+FileReader.calculationEvent.emit('plus');
 calculationEvent.emit('result');
 
 calculationEvent.emit('minus');
