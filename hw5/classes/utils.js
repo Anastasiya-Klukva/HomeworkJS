@@ -7,15 +7,15 @@ class Utils {
     }
 
     parseNumber(value) {
-        let number = undefined;
-        if (!number) {
-            return new NumberParsingException(`ERROR: cant parse value '${value}' to number`);
+        let number;
+        if (Number.parseInt(value) == NaN) {
+            throw new NumberParsingException(`ERROR: cant parse value '${value}' to number`);
         } else {
             return number;
         }
     }
 
-    isSafeNumber(number) {
+    checkOfSafeNumber(number) {
         if (number < Number.MIN_SAFE_INTEGER || number > Number.MAX_SAFE_INT) {
             console.log('Attention, mistake where you make a counting!')
         }

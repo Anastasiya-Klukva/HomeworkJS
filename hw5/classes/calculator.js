@@ -12,22 +12,22 @@ class Calculator {
 
     plus() {
         this.resultOfCalculation = this.value1 + this.value2;
-        this.utils.isSafeNumber(this.resultOfCalculation);
+        this.utils.checkOfSafeNumber(this.resultOfCalculation);
     }
 
     minus() {
         this.resultOfCalculation = this.value1 - this.value2;
-        this.utils.isSafeNumber(this.resultOfCalculation);
+        this.utils.checkOfSafeNumber(this.resultOfCalculation);
     }
 
     multiply() {
         this.resultOfCalculation = this.value1 * this.value2;
-        this.utils.isSafeNumber(this.resultOfCalculation);
+        this.utils.checkOfSafeNumber(this.resultOfCalculation);
     }
 
     divide() {
         this.resultOfCalculation = this.value1 / this.value2;
-        this.utils.isSafeNumber(this.resultOfCalculation);
+        this.utils.checkOfSafeNumber(this.resultOfCalculation);
     }
 
     result() {

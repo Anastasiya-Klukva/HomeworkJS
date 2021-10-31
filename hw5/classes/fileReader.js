@@ -13,10 +13,7 @@ class FileReader {
         const [value1, value2] = dataFromFile.split(/\s+/);
 
         const number1 = utils.parseNumber(value1);
-        utils.isSafeNumber(number1);
-
         const number2 = utils.parseNumber(value2);
-        utils.isSafeNumber(number2);
 
         return [number1, number2];
     }
