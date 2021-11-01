@@ -1,6 +1,9 @@
-const fs = require("fs");
+const { fs } = require("fs/promises");
+const { createReadStream } = require("fs");
+const { readline } = require('readline');
 const { FileEmptyException } = require('../exceptions/fileEmptyException');
 const { Utils } = require('./utils');
+const { resolve } = require("path");
 
 class FileReader {
     async getNumbersFromFile(filePath) {
@@ -18,21 +21,22 @@ class FileReader {
         return [number1, number2];
     }
 
-    readFile(filePath) {
-        return new Promise((resolve, reject) => {
-            let dataFromFile = '';
-            fs.createReadStream(filePath)
-                .on('error', error => {
-                    reject(error);
-                })
-                .on('data', (data) => {
-                    dataFromFile += data.toString();
-                })
-                .on('end', () => {
-                    resolve(dataFromFile);
-                });
-        });
+    async readFile(filePath) {
+
+        const stream = createReadStream(filePath);
+        setTimeout(() => {
+            stream.on('error', err => {
+                reject(err);
+            });
+            stream.on('data', data => {
+                dataFromFile += data.toString();
+            });
+            stream.on('end', () => {
+                resolve(dataFromFile)
+            });
+        }, 1500);
     }
 }
+
 
 module.exports = { FileReader };
